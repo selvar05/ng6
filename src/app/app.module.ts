@@ -15,7 +15,9 @@ import { EditUserComponent } from './edit-user/edit-user.component';
 import { ListUserComponent } from './list-user/list-user.component';
 import {UserService} from './user.service';
 import {AuthService} from './auth.service';
-import {ReactiveFormsModule} from '@angular/forms'
+import {ReactiveFormsModule} from '@angular/forms';
+import { IpdetailsComponent } from './ipdetails/ipdetails.component'
+import { MatPaginatorModule } from '@angular/material';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +29,7 @@ import {ReactiveFormsModule} from '@angular/forms'
     AddUserComponent,
     EditUserComponent,
     ListUserComponent,
+    IpdetailsComponent,
     
   ],
   imports: [
@@ -35,7 +38,8 @@ import {ReactiveFormsModule} from '@angular/forms'
     HttpClientModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    MaterialModule
+    MaterialModule,
+    MatPaginatorModule 
 
   ],
   providers: [AuthService,UserService],

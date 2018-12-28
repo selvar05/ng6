@@ -7,6 +7,7 @@ import {LoginComponent} from "./login/login.component";
 import {AddUserComponent} from "./add-user/add-user.component";
 import {ListUserComponent} from "./list-user/list-user.component";
 import {EditUserComponent} from "./edit-user/edit-user.component";
+import { IpdetailsComponent } from './ipdetails/ipdetails.component';
 const routes: Routes = [
   {
     path:'',
@@ -35,6 +36,10 @@ const routes: Routes = [
   {
     path:'posts',
     component:PostsComponent
+  },
+  {
+    path:'ipdetails',
+    component:IpdetailsComponent
   }
 ];
 
