@@ -1,7 +1,44 @@
-table {
-    width: 100%;
-  }
+.mat-row,
+.mat-header-row {
+
+  width: 100%;
+  width: max-content;
+}
+
+.mat-table {
+  overflow: scroll;
+  max-height: 500px;
+}
+
+.mat-cell,
+.mat-header-cell {
   
-  tr.mat-footer-row {
-    font-weight: bold;
-  }
+}
+/*unnecessary to make table header fixed*/
+.mat-header-row {
+  top: 0;
+  position: sticky;
+  z-index: 1;
+  background-color: inherit;
+  text-align: center;
+}
+td.mat-cell, td.mat-footer-cell, th.mat-header-cell{
+  padding:5px 8px;
+}
+.mat-header-row{
+  background: #2b0a3d;
+
+}
+.mat-header-row th{
+  color:#fff;
+}
+.form-field,.mat-form-field-label-wrapper{
+  color:#fff;
+  caret-color:#fff;
+}
+.mat-form-field-appearance-legacy .mat-form-field-label{
+  color:#fff !important;
+}
+.mat-form-field-appearance-legacy .mat-form-field-label{
+  color:#fff !important;
+}

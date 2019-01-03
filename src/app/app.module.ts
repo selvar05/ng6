@@ -18,6 +18,8 @@ import {AuthService} from './auth.service';
 import {ReactiveFormsModule} from '@angular/forms';
 import { IpdetailsComponent } from './ipdetails/ipdetails.component'
 import { MatPaginatorModule } from '@angular/material';
+import { SmartTableComponent } from './smart-table/smart-table.component';
+import { Ng2SmartTableModule } from 'ng2-smart-table'
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +32,8 @@ import { MatPaginatorModule } from '@angular/material';
     EditUserComponent,
     ListUserComponent,
     IpdetailsComponent,
+    SmartTableComponent,
+    
     
   ],
   imports: [
@@ -39,7 +43,8 @@ import { MatPaginatorModule } from '@angular/material';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     MaterialModule,
-    MatPaginatorModule 
+    MatPaginatorModule,
+    Ng2SmartTableModule,
 
   ],
   providers: [AuthService,UserService],

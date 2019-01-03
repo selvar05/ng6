@@ -8,6 +8,7 @@ import {AddUserComponent} from "./add-user/add-user.component";
 import {ListUserComponent} from "./list-user/list-user.component";
 import {EditUserComponent} from "./edit-user/edit-user.component";
 import { IpdetailsComponent } from './ipdetails/ipdetails.component';
+import { SmartTableComponent } from './smart-table/smart-table.component';
 const routes: Routes = [
   {
     path:'',
@@ -40,6 +41,10 @@ const routes: Routes = [
   {
     path:'ipdetails',
     component:IpdetailsComponent
+  },
+  {
+    path:'smarttable',
+    component:SmartTableComponent
   }
 ];
 
