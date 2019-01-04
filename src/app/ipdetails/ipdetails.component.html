@@ -5,93 +5,108 @@
   
 <table mat-table [dataSource]="dataSource">
   <!-- ID Column -->
-  <ng-container matColumnDef="id">
-    <th mat-header-cell *matHeaderCellDef> ID 
+  <ng-container matColumnDef="Region">
+    <th mat-header-cell *matHeaderCellDef> Region
       <div>
         <mat-form-field>
-    <input matInput class="form-field" [formControl]="idFilter" placeholder="ID Filter">
+    <input matInput class="form-field" [formControl]="RegionFilter" placeholder="ID Filter">
   </mat-form-field>
         </div>
     </th>
-    <td mat-cell *matCellDef="let ipdata"> {{ipdata.id}} </td>
+    <td mat-cell *matCellDef="let ipdata"> {{ipdata.Region}} </td>
     
   </ng-container>
 
   <!-- Region Column -->
-  <ng-container matColumnDef="region">
-    <th mat-header-cell *matHeaderCellDef> Region 
+  <ng-container matColumnDef="CountryName">
+    <th mat-header-cell *matHeaderCellDef> Country Name 
       <div>
         <mat-form-field>
-    <input matInput class="form-field" [formControl]="regionFilter" placeholder="ID Filter">
+    <input matInput class="form-field" [formControl]="CountryNameFilter" placeholder="ID Filter">
   </mat-form-field>
         </div>
     </th>
-    <td mat-cell *matCellDef="let ipdata"> {{ipdata.region}} </td>
+    <td mat-cell *matCellDef="let ipdata"> {{ipdata.CountryName}} </td>
   </ng-container>
  <!-- countryName Column -->
- <ng-container matColumnDef="countryName">
-  <th mat-header-cell *matHeaderCellDef> Country Name  <div>
+ <ng-container matColumnDef="CityName">
+  <th mat-header-cell *matHeaderCellDef> City Name  <div>
     <mat-form-field>
-<input matInput class="form-field" [formControl]="countryNameFilter" placeholder="Country Name Filter">
+<input matInput class="form-field" [formControl]="CityNameFilter" placeholder="Country Name Filter">
 </mat-form-field>
     </div></th>
-  <td mat-cell *matCellDef="let ipdata"> {{ipdata.countryName}} </td>
+  <td mat-cell *matCellDef="let ipdata"> {{ipdata.CityName}} </td>
 </ng-container>
  <!-- cityName Column -->
- <ng-container matColumnDef="cityName">
-  <th mat-header-cell *matHeaderCellDef> City Name 
+ <ng-container matColumnDef="FileID">
+  <th mat-header-cell *matHeaderCellDef> File ID 
     <div>
       <mat-form-field>
-  <input matInput class="form-field" [formControl]="cityNameFilter" placeholder="cityName Filter">
+  <input matInput class="form-field" [formControl]="FileIDFilter" placeholder="cityName Filter">
   </mat-form-field>
       </div>
   </th>
-  <td mat-cell *matCellDef="let ipdata"> {{ipdata.cityName}} </td>
+  <td mat-cell *matCellDef="let ipdata"> {{ipdata.FileID}} </td>
 </ng-container>
  <!-- seatCapacity Column -->
- <ng-container matColumnDef="seatCapacity">
-  <th mat-header-cell *matHeaderCellDef> Seat Capacity  </th>
-  <td mat-cell *matCellDef="let ipdata"> {{ipdata.seatCapacity}} </td>
+ <ng-container matColumnDef="BuildingName">
+  <th mat-header-cell *matHeaderCellDef> Building Name  </th>
+  <td mat-cell *matCellDef="let ipdata"> {{ipdata.BuildingName}} </td>
 </ng-container>
 
  <!-- userOccupancy Column -->
- <ng-container matColumnDef="userOccupancy">
-  <th mat-header-cell *matHeaderCellDef> User Occupancy </th>
-  <td mat-cell *matCellDef="let ipdata"> {{ipdata.userOccupancy}} </td>
+ <ng-container matColumnDef="AreaName">
+  <th mat-header-cell *matHeaderCellDef> Area Name </th>
+  <td mat-cell *matCellDef="let ipdata"> {{ipdata.AreaName}} </td>
+</ng-container>
+<ng-container matColumnDef="SeatCapacity">
+  <th mat-header-cell *matHeaderCellDef> Seat Capacity </th>
+  <td mat-cell *matCellDef="let ipdata"> {{ipdata.SeatCapacity}} </td>
 </ng-container>
  <!-- ipsubnet Column -->
- <ng-container matColumnDef="ipsubnet">
-  <th mat-header-cell *matHeaderCellDef> ipsubnet </th>
-  <td mat-cell *matCellDef="let ipdata"> {{ipdata.ipsubnet}} </td>
+ <ng-container matColumnDef="UsersOccupancy">
+  <th mat-header-cell *matHeaderCellDef> Users Occupancy </th>
+  <td mat-cell *matCellDef="let ipdata"> {{ipdata.UsersOccupancy}} </td>
 </ng-container>
 
 <!-- dhcpserver Column -->
-<ng-container matColumnDef="dhcpserver">
-  <th mat-header-cell *matHeaderCellDef> dhcpserver </th>
-  <td mat-cell *matCellDef="let ipdata"> {{ipdata.dhcpserver}} </td>
+<ng-container matColumnDef="FileName">
+  <th mat-header-cell *matHeaderCellDef> File Name </th>
+  <td mat-cell *matCellDef="let ipdata"> {{ipdata.FileName}} </td>
 </ng-container>
  <!-- dhcpserverHostname Column -->
- <ng-container matColumnDef="dhcpserverHostname">
-  <th mat-header-cell *matHeaderCellDef>dhcpserverHostname  </th>
-  <td mat-cell *matCellDef="let ipdata"> {{ipdata.dhcpserverHostname}} </td>
+ <ng-container matColumnDef="LeaseType">
+  <th mat-header-cell *matHeaderCellDef>Lease Type  </th>
+  <td mat-cell *matCellDef="let ipdata"> {{ipdata.LeaseType}} </td>
 </ng-container>
 
  <!-- supportGroup Column -->
- <ng-container matColumnDef="supportGroup">
-  <th mat-header-cell *matHeaderCellDef> supportGroup </th>
-  <td mat-cell *matCellDef="let ipdata"> {{ipdata.supportGroup}} </td>
+ <ng-container matColumnDef="LeaseEndDate">
+  <th mat-header-cell *matHeaderCellDef> Lease EndDate </th>
+  <td mat-cell *matCellDef="let ipdata"> {{ipdata.LeaseEndDate}} </td>
 </ng-container>
  <!-- areaName Column -->
- <ng-container matColumnDef="areaName">
-  <th mat-header-cell *matHeaderCellDef> areaName </th>
-  <td mat-cell *matCellDef="let ipdata"> {{ipdata.areaName}} </td>
+ <ng-container matColumnDef="AddressSuite">
+  <th mat-header-cell *matHeaderCellDef> Address Suite </th>
+  <td mat-cell *matCellDef="let ipdata"> {{ipdata.AddressSuite}} </td>
 </ng-container>
  <!-- buildingName Column -->
- <ng-container matColumnDef="buildingName">
-  <th mat-header-cell *matHeaderCellDef> buildingName </th>
-  <td mat-cell *matCellDef="let ipdata"> {{ipdata.buildingName}} </td>
+ <ng-container matColumnDef="Subtype">
+  <th mat-header-cell *matHeaderCellDef> Subtype </th>
+  <td mat-cell *matCellDef="let ipdata"> {{ipdata.Subtype}} </td>
 </ng-container>
-
+<ng-container matColumnDef="Division">
+  <th mat-header-cell *matHeaderCellDef> Division </th>
+  <td mat-cell *matCellDef="let ipdata"> {{ipdata.Division}} </td>
+</ng-container>
+<ng-container matColumnDef="Size">
+  <th mat-header-cell *matHeaderCellDef> Size </th>
+  <td mat-cell *matCellDef="let ipdata"> {{ipdata.Size}} </td>
+</ng-container>
+<ng-container matColumnDef="UOM">
+  <th mat-header-cell *matHeaderCellDef> UOM </th>
+  <td mat-cell *matCellDef="let ipdata"> {{ipdata.UOM}} </td>
+</ng-container>
 <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
 <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>

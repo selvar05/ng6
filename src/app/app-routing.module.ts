@@ -9,6 +9,7 @@ import {ListUserComponent} from "./list-user/list-user.component";
 import {EditUserComponent} from "./edit-user/edit-user.component";
 import { IpdetailsComponent } from './ipdetails/ipdetails.component';
 import { SmartTableComponent } from './smart-table/smart-table.component';
+import { LocdetailsComponent } from './locdetails/locdetails.component';
 const routes: Routes = [
   {
     path:'',
@@ -39,8 +40,8 @@ const routes: Routes = [
     component:PostsComponent
   },
   {
-    path:'ipdetails',
-    component:IpdetailsComponent
+    path:'locdetails',
+    component:LocdetailsComponent
   },
   {
     path:'smarttable',

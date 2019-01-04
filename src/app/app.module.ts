@@ -19,7 +19,8 @@ import {ReactiveFormsModule} from '@angular/forms';
 import { IpdetailsComponent } from './ipdetails/ipdetails.component'
 import { MatPaginatorModule } from '@angular/material';
 import { SmartTableComponent } from './smart-table/smart-table.component';
-import { Ng2SmartTableModule } from 'ng2-smart-table'
+import { Ng2SmartTableModule } from 'ng2-smart-table';
+import { LocdetailsComponent } from './locdetails/locdetails.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +34,7 @@ import { Ng2SmartTableModule } from 'ng2-smart-table'
     ListUserComponent,
     IpdetailsComponent,
     SmartTableComponent,
+    LocdetailsComponent,
     
     
   ],
